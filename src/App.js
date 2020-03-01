@@ -3,8 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const play = () => {
+    const a = new Audio('good/A3.mp3')
+    a.play()
+  }
   return (
-    <div className="App">
+    <div className="App" onClick={play}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
