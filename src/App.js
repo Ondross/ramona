@@ -1,27 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Playback from './components/playback/playback.tsx'
+import data from './database/data'
+
 
 function App() {
-  const play = () => {
-    const a = new Audio('good/A3.mp3')
-    a.play()
-  }
   return (
-    <div className="App" onClick={play}>
+    <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Playback
+          notes={["C4", "C4", "D4", "D4", "F4", "F4", "E4", "E4"]}
+          listeners={[data.user(data.currentUser())]}
+        />
       </header>
     </div>
   );
