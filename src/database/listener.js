@@ -19,7 +19,6 @@ import {db} from "./initialize"
 
 
 // TODO: support collections, docs, and single key/strings
-// TODO: HOC
 // TODO: test more nesting
 // TODO: consolidate/cleanup the duplicate path resolving code (it's identical except on vs once)
 
